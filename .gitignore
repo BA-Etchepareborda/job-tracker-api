@@ -1,7 +1,3 @@
 __pycache__/
-.env
 *.pyc
-*.db
-.vscode/
-.idea/
-docker_volume/
+*.env
