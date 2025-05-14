@@ -2,10 +2,15 @@ from sqlalchemy import Column, String, Integer, DateTime, ForeignKey, Text
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from .db import Base
+from pydantic import BaseModel
+
+
+class Todo(BaseModel):
+    id:int
+    item:str
 
 class User(Base):
     __tablename__ = "users"
-
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
